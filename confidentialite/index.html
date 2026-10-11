@@ -117,6 +117,11 @@
       <td data-titre="Qui les voit">L’éditeur uniquement. Le membre signalé ne sait pas qui l’a signalé.</td>
     </tr>
     <tr>
+      <th scope="row">Notifications</th>
+      <td data-titre="Ce qu’elles contiennent">Si tu acceptes les notifications : l’identifiant de notification de chaque téléphone concerné (fourni par Expo), le type de téléphone (iPhone ou Android) et la date de dernière ouverture de l’appli.</td>
+      <td data-titre="Qui les voit">Personne : ils servent seulement à envoyer les notifications.</td>
+    </tr>
+    <tr>
       <th scope="row">Données techniques</th>
       <td data-titre="Ce qu’elles contiennent">Adresse IP, type d’appareil, version de l’appli, heures de connexion, enregistrés automatiquement dans les journaux des services techniques.</td>
       <td data-titre="Qui les voit">L’éditeur et ses prestataires, pour la sécurité et le bon fonctionnement.</td>
@@ -125,12 +130,13 @@
 </table>
 
 <h3>Ce qui reste sur ton téléphone</h3>
-<p>L’appli garde sur ton appareil ta session de connexion (pour que tu restes connecté), ton choix de thème, une copie temporaire des photos déjà affichées (pour aller plus vite), les mises à jour de l’appli téléchargées et un identifiant technique aléatoire utilisé pour ces mises à jour.</p>
+<p>L’appli garde sur ton appareil ta session de connexion (pour que tu restes connecté), ton choix de thème, une copie temporaire des photos déjà affichées (pour aller plus vite), les mises à jour de l’appli téléchargées, un identifiant technique aléatoire utilisé pour ces mises à jour et, si tu as accepté les notifications, l’identifiant de notification du téléphone (pour l’effacer quand tu te déconnectes).</p>
 
 <h3>Les autorisations demandées</h3>
 <ul>
   <li><strong>Appareil photo</strong> : uniquement pour scanner le QR code le jour J. L’image de la caméra n’est ni enregistrée ni envoyée.</li>
   <li><strong>Photos</strong> : uniquement les photos que tu choisis pour ton profil ou tes annonces.</li>
+  <li><strong>Notifications</strong> : seulement si tu les acceptes. Tu peux les couper à tout moment dans les réglages de ton téléphone.</li>
 </ul>
 
 <h3>Ce que Cartonnade n’utilise pas</h3>
@@ -138,7 +144,7 @@
 
 <h2 id="finalites">Pourquoi, et sur quelle base légale</h2>
 <ul>
-  <li><strong>Faire fonctionner Cartonnade</strong> (compte, profil, annonces, mise en relation, messagerie, jour J, avis, e-mails de code et e-mails de suivi) : c’est nécessaire à l’exécution des <a href="/conditions/">conditions d’utilisation</a> que tu acceptes en t’inscrivant (article 6.1.b du RGPD).</li>
+  <li><strong>Faire fonctionner Cartonnade</strong> (compte, profil, annonces, mise en relation, messagerie, jour J, avis, e-mails de code, e-mails de suivi et notifications) : c’est nécessaire à l’exécution des <a href="/conditions/">conditions d’utilisation</a> que tu acceptes en t’inscrivant (article 6.1.b du RGPD).</li>
   <li><strong>Assurer la sécurité et la modération</strong> (journaux techniques, limites contre les abus, signalements, blocages) : c’est l’intérêt légitime de l’éditeur et des membres à disposer d’un service sûr (article 6.1.f du RGPD).</li>
   <li><strong>Répondre aux demandes des autorités</strong>, lorsque la loi l’impose (article 6.1.c du RGPD).</li>
 </ul>
@@ -149,7 +155,8 @@
 <ul>
   <li><strong>Supabase</strong> (Supabase Pte. Ltd., Singapour) : hébergement de la base de données, des comptes et des photos. Les serveurs sont situés en France, à Paris.</li>
   <li><strong>Brevo</strong> (Sendinblue SAS, France) : envoi des e-mails contenant un code (confirmation d’inscription, mot de passe oublié) et des e-mails de suivi (proposition reçue, confirmation, rendez-vous modifié, annulation, désistement, rappel la veille, avis). Brevo reçoit ton adresse e-mail, ton prénom et le contenu de ces e-mails : le code, ou le prénom de l’autre membre, le titre de l’annonce, la date, l’heure, les villes et, s’il y en a, le petit mot de la proposition ou le commentaire de l’avis. L’adresse exacte du déménagement n’est jamais écrite dans un e-mail.</li>
-  <li><strong>Expo</strong> (650 Industries, Inc., États-Unis) : distribution des mises à jour de l’appli. Quand l’appli vérifie s’il existe une mise à jour, Expo reçoit des données techniques : adresse IP, type d’appareil, version de l’appli, un identifiant aléatoire propre à l’installation et, si l’appli a planté au démarrage, le message d’erreur.</li>
+  <li><strong>Expo</strong> (650 Industries, Inc., États-Unis) : distribution des mises à jour de l’appli et envoi des notifications. Quand l’appli vérifie s’il existe une mise à jour, Expo reçoit des données techniques : adresse IP, type d’appareil, version de l’appli, un identifiant aléatoire propre à l’installation et, si l’appli a planté au démarrage, le message d’erreur. Pour chaque notification, Expo reçoit l’identifiant de notification du téléphone et le contenu de la notification : le prénom de l’autre membre, le titre de l’annonce, la date et l’heure, et selon le cas le début du message (150 caractères au plus), du petit mot de la proposition ou la note de l’avis. L’adresse exacte du déménagement n’est jamais écrite dans une notification.</li>
+  <li><strong>Google</strong> (Firebase Cloud Messaging) et <strong>Apple</strong> (Apple Push Notification service) : livraison des notifications sur les téléphones Android et sur les iPhone. Ils reçoivent de la part d’Expo l’identifiant de notification du téléphone et le contenu de la notification.</li>
   <li><strong>GitHub Pages (GitHub, Inc., États-Unis)</strong> : hébergement du site cartonnade.fr. GitHub reçoit les informations techniques de toute visite d’un site (adresse IP, navigateur).</li>
   <li><strong>Gmail</strong> (Google) : réception des e-mails que tu envoies à l’adresse de contact.</li>
   <li><strong>Google Fonts</strong> (Google) : les e-mails contenant un code chargent leur police depuis les serveurs de Google, qui reçoivent alors l’adresse IP de l’appareil qui ouvre l’e-mail.</li>
@@ -159,7 +166,7 @@
 <p>Tes données ne sont jamais vendues, ni utilisées pour de la publicité. Elles peuvent être transmises aux autorités uniquement si la loi l’impose.</p>
 
 <h2 id="transferts">Transferts hors de l’Union européenne</h2>
-<p>Les données de l’appli sont stockées en France, mais Supabase, Expo et GitHub sont des sociétés établies hors de l’Union européenne (Singapour et États-Unis), et Google peut traiter des données aux États-Unis. Lorsque tes données sont accessibles depuis ces pays, ces transferts sont encadrés par les garanties prévues par le RGPD, en particulier les clauses contractuelles types adoptées par la Commission européenne.</p>
+<p>Les données de l’appli sont stockées en France, mais Supabase, Expo et GitHub sont des sociétés établies hors de l’Union européenne (Singapour et États-Unis), et Google et Apple peuvent traiter des données aux États-Unis. Lorsque tes données sont accessibles depuis ces pays, ces transferts sont encadrés par les garanties prévues par le RGPD, en particulier les clauses contractuelles types adoptées par la Commission européenne.</p>
 
 <h2 id="conservation">Combien de temps les données sont gardées</h2>
 <ul>
@@ -168,7 +175,8 @@
   <li><strong>Compte inutilisé</strong> : un compte inactif pendant 3 ans peut être supprimé, après un e-mail de prévenance.</li>
   <li><strong>Signalements</strong> : effacés automatiquement au bout d’un an. Si le membre signalé ou l’auteur du signalement supprime son compte, le lien avec ce compte est effacé.</li>
   <li><strong>Journaux techniques</strong> : quelques jours, selon les règles des prestataires.</li>
-  <li><strong>Liste des rappels déjà envoyés</strong> (pour ne pas envoyer deux fois le même) : 60 jours.</li>
+  <li><strong>Identifiants de notification</strong> : effacés quand tu te déconnectes, quand l’appli est désinstallée (dès qu’Expo le signale), au bout de 90 jours sans ouverture de l’appli, et avec ton compte.</li>
+  <li><strong>Liste des rappels déjà envoyés</strong> (e-mails et notifications, pour ne pas envoyer deux fois le même) : 60 jours.</li>
   <li><strong>Historique d’envoi des e-mails</strong> : conservé par Brevo pour une durée limitée, selon ses propres règles.</li>
 </ul>
 
@@ -184,7 +192,7 @@
 <h2 id="droits">Tes droits</h2>
 <p>Tu peux accéder à tes données, les corriger, les effacer, en limiter l’utilisation, t’opposer à leur utilisation fondée sur l’intérêt légitime, et les récupérer dans un format lisible (portabilité).</p>
 <ul>
-  <li>Dans l’appli : tu peux modifier ton profil à tout moment, couper les e-mails de suivi et supprimer ton compte depuis l’onglet Profil.</li>
+  <li>Dans l’appli : tu peux modifier ton profil à tout moment, couper les e-mails de suivi et supprimer ton compte depuis l’onglet Profil. Les notifications se coupent dans les réglages de ton téléphone.</li>
   <li>Pour tout le reste, écris à <a href="mailto:contact.cartonnade@gmail.com">contact.cartonnade@gmail.com</a> depuis l’adresse e-mail de ton compte. Tu reçois une réponse dans un délai d’un mois au plus.</li>
   <li>Tu peux aussi donner des directives sur ce que deviennent tes données après ton décès.</li>
   <li>Si tu estimes que tes droits ne sont pas respectés, tu peux adresser une réclamation à la CNIL (<a href="https://www.cnil.fr/fr/plaintes">cnil.fr/fr/plaintes</a>).</li>
