@@ -76,8 +76,6 @@ a:hover { text-decoration-thickness: 0.14em; }
 
 .logo { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--texte); text-decoration: none; font-family: var(--titre); font-weight: 900; font-size: 1.45rem; letter-spacing: -0.03em; }
 .logo svg { width: 2.1rem; height: 2.1rem; flex: none; }
-.logo .marque { fill: var(--accent); }
-.logo .carton { stroke: var(--accent-encre); }
 
 .entete-lien { color: var(--attenue); font-weight: 700; font-size: 0.95rem; text-decoration: none; }
 .entete-lien:hover { color: var(--texte); }
