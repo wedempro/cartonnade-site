@@ -33,6 +33,7 @@
   <ul>
     <li>Cartonnade n’utilise que les données qui servent à te mettre en relation avec d’autres membres. Pas de publicité, pas de revente de données, pas de mesure d’audience ni de pistage dans l’appli.</li>
     <li>Ton profil, tes annonces, tes avis et les photos d’équipe ne sont visibles que par les membres connectés. L’adresse exacte d’un déménagement n’est visible que par les aidants acceptés : une photo d’équipe n’indique que la ville de départ. Ton adresse e-mail n’est jamais montrée aux autres membres.</li>
+    <li>La vérification de ta pièce d’identité est facultative : tes papiers sont vérifiés par notre partenaire Didit, et Cartonnade n’en garde que le résultat.</li>
     <li>Tu peux modifier ton profil et supprimer ton compte à tout moment, directement dans l’appli.</li>
     <li>Pour toute question : <a href="mailto:contact.cartonnade@gmail.com">contact.cartonnade@gmail.com</a>.</li>
   </ul>
@@ -74,7 +75,12 @@
     <tr>
       <th scope="row">Profil</th>
       <td data-titre="Ce qu’elles contiennent">Prénom, photo (facultative), année de naissance, ville (avec son département et les coordonnées de son centre), rayon de recherche, phrase de présentation, phrases de personnalité, date d’inscription et, s’il t’a été attribué par l’éditeur, le badge « profil certifié ». Statistiques calculées : nombre de déménagements aidés et organisés, note moyenne.</td>
-      <td data-titre="Qui les voit">Les membres connectés. L’appli leur montre ton âge plutôt que ton année de naissance, et n’affiche pas ton rayon de recherche.</td>
+      <td data-titre="Qui les voit">Les membres connectés. L’appli leur montre ton âge plutôt que ton année de naissance, et n’affiche pas ton rayon de recherche. Ils voient aussi que ton adresse e-mail est vérifiée, jamais l’adresse elle-même.</td>
+    </tr>
+    <tr>
+      <th scope="row">Vérification d’identité (facultative)</th>
+      <td data-titre="Ce qu’elles contiennent">Le résultat (pièce d’identité vérifiée ou non), sa date, et l’identifiant de la vérification chez Didit. Les photos de ta pièce d’identité et ton selfie sont envoyés directement à Didit depuis sa page : Cartonnade ne les reçoit jamais.</td>
+      <td data-titre="Qui les voit">Les membres connectés voient seulement « Pièce d’identité vérifiée » sur ton profil et sur tes annonces.</td>
     </tr>
     <tr>
       <th scope="row">Annonces</th>
@@ -139,7 +145,7 @@
 
 <h3>Les autorisations demandées</h3>
 <ul>
-  <li><strong>Appareil photo</strong> : pour scanner le QR code le jour J, et pour prendre une photo d’équipe si tu le décides. Pour le QR code, l’image de la caméra n’est ni enregistrée ni envoyée. Une photo d’équipe n’est envoyée que si tu touches « Publier », et elle n’est pas ajoutée à ta galerie.</li>
+  <li><strong>Appareil photo</strong> : pour scanner le QR code le jour J, et pour prendre une photo d’équipe si tu le décides. Pour le QR code, l’image de la caméra n’est ni enregistrée ni envoyée. Une photo d’équipe n’est envoyée que si tu touches « Publier », et elle n’est pas ajoutée à ta galerie. La vérification d’identité se fait sur la page de Didit, dans le navigateur intégré : c’est cette page qui demande l’accès à l’appareil photo.</li>
   <li><strong>Photos</strong> : uniquement les photos que tu choisis pour ton profil, tes annonces ou une photo d’équipe.</li>
   <li><strong>Notifications</strong> : seulement si tu les acceptes. Tu peux les couper à tout moment dans les réglages de ton téléphone.</li>
 </ul>
@@ -150,15 +156,17 @@
 <h2 id="finalites">Pourquoi, et sur quelle base légale</h2>
 <ul>
   <li><strong>Faire fonctionner Cartonnade</strong> (compte, profil, annonces, mise en relation, messagerie, jour J, avis, photos d’équipe, e-mails de code, e-mails de suivi et notifications) : c’est nécessaire à l’exécution des <a href="/conditions/">conditions d’utilisation</a> que tu acceptes en t’inscrivant (article 6.1.b du RGPD).</li>
+  <li><strong>Vérifier ta pièce d’identité</strong>, seulement si tu le demandes : sur la base de ton consentement explicite, que tu donnes en cochant la case prévue avant de commencer (articles 6.1.a et, pour la comparaison de ton visage avec la photo de ta pièce d’identité, 9.2.a du RGPD). Tu peux retirer ton consentement en écrivant à <a href="mailto:contact.cartonnade@gmail.com">contact.cartonnade@gmail.com</a> : la mention « vérifiée » est alors retirée.</li>
   <li><strong>Assurer la sécurité et la modération</strong> (journaux techniques, limites contre les abus, signalements, blocages) : c’est l’intérêt légitime de l’éditeur et des membres à disposer d’un service sûr (article 6.1.f du RGPD).</li>
   <li><strong>Répondre aux demandes des autorités</strong>, lorsque la loi l’impose (article 6.1.c du RGPD).</li>
 </ul>
-<p>Aucune décision n’est prise automatiquement à ton sujet et aucun profilage n’est réalisé.</p>
+<p>Aucun profilage n’est réalisé. La vérification d’identité, si tu la demandes, est faite automatiquement par Didit, parfois complétée par une vérification humaine chez Didit ; un échec empêche seulement d’afficher la mention « vérifiée », et tu peux réessayer ou écrire à <a href="mailto:contact.cartonnade@gmail.com">contact.cartonnade@gmail.com</a>.</p>
 
 <h2 id="destinataires">Les prestataires qui reçoivent des données</h2>
 <p>L’éditeur utilise des prestataires techniques, qui traitent les données uniquement pour son compte :</p>
 <ul>
   <li><strong>Supabase</strong> (Supabase Pte. Ltd., Singapour) : hébergement de la base de données, des comptes et des photos. Les serveurs sont situés en France, à Paris.</li>
+  <li><strong>Didit</strong> (Didit Identity Spain, S.L., Barcelone, Espagne) : vérification des pièces d’identité, seulement pour les membres qui la demandent. Didit reçoit les photos de ta pièce d’identité, ton selfie et les informations techniques de ta connexion (adresse IP, appareil) ; il contrôle l’authenticité du document et compare ton visage à sa photo, puis indique le résultat à Cartonnade. Il conserve ces données 30 jours, puis les efface.</li>
   <li><strong>Brevo</strong> (Sendinblue SAS, France) : envoi des e-mails contenant un code (confirmation d’inscription, mot de passe oublié) et des e-mails de suivi (proposition reçue, confirmation, rendez-vous modifié, annulation, désistement, rappel la veille, avis). Brevo reçoit ton adresse e-mail, ton prénom et le contenu de ces e-mails : le code, ou le prénom de l’autre membre, le titre de l’annonce, la date, l’heure, les villes et, s’il y en a, le petit mot de la proposition ou le commentaire de l’avis. L’adresse exacte du déménagement n’est jamais écrite dans un e-mail.</li>
   <li><strong>Expo</strong> (650 Industries, Inc., États-Unis) : distribution des mises à jour de l’appli et envoi des notifications. Quand l’appli vérifie s’il existe une mise à jour, Expo reçoit des données techniques : adresse IP, type d’appareil, version de l’appli, un identifiant aléatoire propre à l’installation et, si l’appli a planté au démarrage, le message d’erreur. Pour chaque notification, Expo reçoit l’identifiant de notification du téléphone et le contenu de la notification : le prénom de l’autre membre, le titre de l’annonce, la date et l’heure, et selon le cas le début du message (150 caractères au plus), du petit mot de la proposition ou de la réponse à un avis, ou la note d’un avis déjà visible. L’adresse exacte du déménagement n’est jamais écrite dans une notification.</li>
   <li><strong>Google</strong> (Firebase Cloud Messaging) et <strong>Apple</strong> (Apple Push Notification service) : livraison des notifications sur les téléphones Android et sur les iPhone. Ils reçoivent de la part d’Expo l’identifiant de notification du téléphone et le contenu de la notification.</li>
@@ -172,11 +180,12 @@
 <p>Tes données ne sont jamais vendues, ni utilisées pour de la publicité. Elles peuvent être transmises aux autorités uniquement si la loi l’impose.</p>
 
 <h2 id="transferts">Transferts hors de l’Union européenne</h2>
-<p>Les données de l’appli sont stockées en France, mais Supabase, Expo et GitHub sont des sociétés établies hors de l’Union européenne (Singapour et États-Unis), et Google et Apple peuvent traiter des données aux États-Unis. Lorsque tes données sont accessibles depuis ces pays, ces transferts sont encadrés par les garanties prévues par le RGPD, en particulier les clauses contractuelles types adoptées par la Commission européenne.</p>
+<p>Les données de l’appli sont stockées en France, mais Supabase, Expo et GitHub sont des sociétés établies hors de l’Union européenne (Singapour et États-Unis), Google et Apple peuvent traiter des données aux États-Unis, et Didit peut en traiter hors de l’Union européenne. Lorsque tes données sont accessibles depuis ces pays, ces transferts sont encadrés par les garanties prévues par le RGPD, en particulier les clauses contractuelles types adoptées par la Commission européenne.</p>
 
 <h2 id="conservation">Combien de temps les données sont gardées</h2>
 <ul>
   <li><strong>Tant que ton compte existe</strong> : compte, profil, annonces, propositions d’aide, messages, avis et blocages.</li>
+  <li><strong>Vérification d’identité</strong> : le résultat est gardé tant que ton compte existe ; les photos de ta pièce d’identité et ton selfie sont effacés par Didit 30 jours après la vérification.
   <li><strong>Photos d’équipe</strong> : jusqu’à ce que leur auteur ou un membre de l’équipe du déménagement les retire (chacun peut le faire à tout moment, sans avoir à se justifier). Elles quittent l’onglet Communauté au bout de 90 jours mais restent visibles sur la fiche du déménagement et sur les profils. Une photo signalée par trois membres différents est masquée en attendant que l’éditeur l’examine.</li>
   <li><strong>Quand tu supprimes ton compte</strong> : tout cela est effacé immédiatement et définitivement, photos comprises. Les conversations auxquelles tu as participé disparaissent aussi pour les autres membres, ainsi que les avis que tu as écrits et reçus, les photos d’équipe que tu as publiées et celles des déménagements que tu as organisés.</li>
   <li><strong>Compte inutilisé</strong> : un compte inactif pendant 3 ans peut être supprimé, après un e-mail de prévenance.</li>
