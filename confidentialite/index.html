@@ -131,7 +131,7 @@
     </tr>
     <tr>
       <th scope="row">Notifications</th>
-      <td data-titre="Ce qu’elles contiennent">Si tu acceptes les notifications : l’identifiant de notification de chaque téléphone concerné (fourni par Expo), le type de téléphone (iPhone ou Android) et la date de dernière ouverture de l’appli.</td>
+      <td data-titre="Ce qu’elles contiennent">Si tu acceptes les notifications : l’identifiant de notification de chaque téléphone concerné (fourni par Expo), le type de téléphone (iPhone ou Android) et la date de dernière ouverture de l’appli. Pour l’alerte « Un déménagement près de chez toi » : ton choix de la recevoir ou non, et la date de la dernière alerte envoyée.</td>
       <td data-titre="Qui les voit">Personne : ils servent seulement à envoyer les notifications.</td>
     </tr>
     <tr>
@@ -149,7 +149,7 @@
 <ul>
   <li><strong>Appareil photo</strong> : pour scanner le QR code le jour J, et pour prendre une photo d’équipe si tu le décides. Pour le QR code, l’image de la caméra n’est ni enregistrée ni envoyée. Une photo d’équipe n’est envoyée que si tu touches « Publier », et elle n’est pas ajoutée à ta galerie. La vérification d’identité se fait sur la page de Didit, dans le navigateur intégré : c’est cette page qui demande l’accès à l’appareil photo.</li>
   <li><strong>Photos</strong> : uniquement les photos que tu choisis pour ton profil, tes annonces ou une photo d’équipe.</li>
-  <li><strong>Notifications</strong> : seulement si tu les acceptes. Tu peux les couper à tout moment dans les réglages de ton téléphone.</li>
+  <li><strong>Notifications</strong> : seulement si tu les acceptes. Tu peux les couper à tout moment dans les réglages de ton téléphone. Parmi elles, l’alerte « Un déménagement près de chez toi » utilise ta ville et ton rayon de recherche pour savoir si un nouveau déménagement est dans ta zone (une alerte par jour au plus, en journée) ; tu peux la couper seule dans Profil > Compte > Notifications et e-mails.</li>
   <li><strong>Agenda</strong> : seulement si tu touches « Ajouter à l’agenda ». La fenêtre de ton téléphone s’ouvre, déjà remplie (date, heure, adresse) : c’est toi qui enregistres. Cartonnade ne lit pas ton agenda. Seuls les iPhone d’avant iOS 17 demandent d’abord une autorisation.</li>
 </ul>
 
@@ -171,7 +171,7 @@
   <li><strong>Supabase</strong> (Supabase Pte. Ltd., Singapour) : hébergement de la base de données, des comptes et des photos. Les serveurs sont situés en France, à Paris.</li>
   <li><strong>Didit</strong> (Didit Identity Spain, S.L., Barcelone, Espagne) : vérification des pièces d’identité, seulement pour les membres qui la demandent. Didit reçoit les photos de ta pièce d’identité, ton selfie et les informations techniques de ta connexion (adresse IP, appareil) ; il contrôle l’authenticité du document et compare ton visage à sa photo, puis indique le résultat à Cartonnade. Il conserve ces données un mois, puis les efface.</li>
   <li><strong>Brevo</strong> (Sendinblue SAS, France) : envoi des e-mails contenant un code (confirmation d’inscription, mot de passe oublié) et des e-mails de suivi (proposition reçue, confirmation, rendez-vous modifié, annulation, désistement, rappel la veille, avis). Brevo reçoit ton adresse e-mail, ton prénom et le contenu de ces e-mails : le code, ou le prénom de l’autre membre, le titre de l’annonce, la date, l’heure, les villes et, s’il y en a, le petit mot de la proposition ou le commentaire de l’avis. L’adresse exacte du déménagement n’est jamais écrite dans un e-mail.</li>
-  <li><strong>Expo</strong> (650 Industries, Inc., États-Unis) : distribution des mises à jour de l’appli et envoi des notifications. Quand l’appli vérifie s’il existe une mise à jour, Expo reçoit des données techniques : adresse IP, type d’appareil, version de l’appli, un identifiant aléatoire propre à l’installation et, si l’appli a planté au démarrage, le message d’erreur. Pour chaque notification, Expo reçoit l’identifiant de notification du téléphone et le contenu de la notification : le prénom de l’autre membre, le titre de l’annonce, la date et l’heure, et selon le cas le début du message (150 caractères au plus), du petit mot de la proposition ou de la réponse à un avis, ou la note d’un avis déjà visible. L’adresse exacte du déménagement n’est jamais écrite dans une notification.</li>
+  <li><strong>Expo</strong> (650 Industries, Inc., États-Unis) : distribution des mises à jour de l’appli et envoi des notifications. Quand l’appli vérifie s’il existe une mise à jour, Expo reçoit des données techniques : adresse IP, type d’appareil, version de l’appli, un identifiant aléatoire propre à l’installation et, si l’appli a planté au démarrage, le message d’erreur. Pour chaque notification, Expo reçoit l’identifiant de notification du téléphone et le contenu de la notification : le prénom de l’autre membre, le titre de l’annonce, la date et l’heure, la ville de départ pour l’alerte « Un déménagement près de chez toi », et selon le cas le début du message (150 caractères au plus), du petit mot de la proposition ou de la réponse à un avis, ou la note d’un avis déjà visible. L’adresse exacte du déménagement n’est jamais écrite dans une notification.</li>
   <li><strong>Google</strong> (Firebase Cloud Messaging) et <strong>Apple</strong> (Apple Push Notification service) : livraison des notifications sur les téléphones Android et sur les iPhone. Ils reçoivent de la part d’Expo l’identifiant de notification du téléphone et le contenu de la notification.</li>
   <li><strong>GitHub Pages (GitHub, Inc., États-Unis)</strong> : hébergement du site cartonnade.fr. GitHub reçoit les informations techniques de toute visite d’un site (adresse IP, navigateur).</li>
   <li><strong>Gmail</strong> (Google) : réception des e-mails que tu envoies à l’adresse de contact.</li>
@@ -212,7 +212,7 @@
 <h2 id="droits">Tes droits</h2>
 <p>Tu peux accéder à tes données, les corriger, les effacer, en limiter l’utilisation, t’opposer à leur utilisation fondée sur l’intérêt légitime, et les récupérer dans un format lisible (portabilité).</p>
 <ul>
-  <li>Dans l’appli : tu peux modifier ton profil à tout moment, couper les e-mails de suivi et supprimer ton compte depuis l’onglet Profil. Les notifications se coupent dans les réglages de ton téléphone.</li>
+  <li>Dans l’appli : tu peux modifier ton profil à tout moment, couper les e-mails de suivi ou l’alerte « Un déménagement près de chez toi » et supprimer ton compte depuis l’onglet Profil. Les notifications se coupent dans les réglages de ton téléphone.</li>
   <li>Pour tout le reste, écris à <a href="mailto:contact.cartonnade@gmail.com">contact.cartonnade@gmail.com</a> depuis l’adresse e-mail de ton compte. Tu reçois une réponse dans un délai d’un mois au plus.</li>
   <li>Tu peux aussi donner des directives sur ce que deviennent tes données après ton décès.</li>
   <li>Si tu estimes que tes droits ne sont pas respectés, tu peux adresser une réclamation à la CNIL (<a href="https://www.cnil.fr/fr/plaintes">cnil.fr/fr/plaintes</a>).</li>
